@@ -48,7 +48,12 @@ export class RulesComponent implements OnInit, AfterViewInit {
     'https://github.com/dewchan01/To-Do-List-application',
     'https://github.com/dewchan01/dewchan01',
     '#',
-    'https://github.com/dewchan01/assignment_demo_2023'
+    'https://github.com/dewchan01/assignment_demo_2023',
+    '#',
+    '#',
+    '#',
+    '#',
+    '#'
   ];
 
   constructor(private homeComponent: HomeComponent) { }
