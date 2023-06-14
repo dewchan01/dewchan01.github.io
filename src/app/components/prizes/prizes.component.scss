@@ -1,0 +1,135 @@
+.prizes{
+    max-width: 1312px;
+    width: 95%;
+    margin: 100px auto 50px;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(10px); 
+    color: #e90029;
+    box-shadow:  0 20px 10px rgba(255, 255, 255, 0.5),
+    0 0 40px 20px rgba(255, 255, 255, 0.3),
+    0 0 60px 30px rgba(255, 255, 255, 0.2),
+    0 0 80px 40px rgba(255, 255, 255, 0.1);
+  }
+
+.page-title {
+  font-size: 3rem;
+  margin-left: 20px;
+}
+
+.flow-line{
+  color: #e90029;
+  margin-top: 50px;
+  position:absolute;
+  left: 12%;
+  bottom: 0;
+}
+
+/* Style prize container */
+.prize-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 45px;
+  margin-left: 20%;
+}
+
+/* Style prize item */
+.prize-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  height: 25%;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #e6e6e6;
+  transition: all 0.2s ease-in-out;
+  color: #333333;
+}
+
+.prize-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px #e6e6e6;
+}
+
+/* Style prize icon */
+.prize-icon {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  font-size: 50px;
+  color: #ffd700;
+  margin-left: 10%;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Style prize details */
+.prize-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+
+}
+
+/* Style prize title */
+.prize-details h2 {
+  font-weight: bold; 
+}
+
+/* Style prize amount */
+.prize-details p {
+  font-size: 25px;
+  color: #ffd700;
+}
+
+@media screen and (max-width: 768px) {
+  .prizes{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .flow-line{
+    display: none;
+  }
+  
+  .page-title {
+    margin-left: 10px;
+  }
+  
+  
+  .prizes p{
+    font-size: 16px;
+  }
+  .prize-container {
+    margin-left: 0;
+  }
+
+  .prize-item{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 20px 10px;
+  }
+  .prize-icon{
+    justify-content: center;
+    margin-left: 0;
+  }
+  .prize-details{
+    align-items: center;
+    align-content: center;
+  }
+
+}

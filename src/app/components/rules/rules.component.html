@@ -1,0 +1,18 @@
+<section class="rules" [style.boxShadow]="boxShadow">
+  <h1>Projects</h1>
+  <div class="flow-line">
+    <pw-circuit-svg></pw-circuit-svg>
+  </div>
+  <div class="rule-container" #container>
+    <div class="arrow left" (click)="scrollLeft()">&lt;</div>
+    <div class="carousel">
+      <ul>
+        <li class="rule" *ngFor="let rule of visibleRules">
+          <a [href]="githubUrls[ruleIndex]" target="_blank">{{rule}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="arrow right" (click)="scrollRight()">&gt;</div>
+  </div>
+  
+</section>

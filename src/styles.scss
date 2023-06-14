@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'TitilliumWeb-SemiBold';
+    background-image: url("assets/ImageAsset/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -100;
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: 'TitilliumWeb-SemiBold';
+    src: url('assets/FontAsset/Titillium_Web/TitilliumWeb-SemiBold.ttf');
+}

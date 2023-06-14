@@ -1,0 +1,10 @@
+<div class="intro-container" [ngClass]="{ 'animate-image': true }">
+  <div class="black-block">
+    <img src="../../../assets/ImageAsset/logo-removebg-preview.png" class="left-image" [ngClass]="{ 'animate-image': animateLeftImage }"
+      *ngIf="!isSmallScreen">
+    <img src="../../../assets/ImageAsset/dewchan-char.png" class="right-image"
+      [ngClass]="{ 'animate-image': animateLeftImage }" *ngIf="!isSmallScreen">
+    <img src="../../../assets/ImageAsset/dewchan.png" class="center-image" *ngIf="isSmallScreen"
+      [ngClass]="{ 'animate-image': true }" [@fadeIn]>
+  </div>
+</div>

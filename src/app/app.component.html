@@ -1,0 +1,12 @@
+<div class="app">
+    <ngx-ui-loader fgsColor="#c1030c" bgsColor="#c1030c" text="WELCOME" fgsType="rectangle-bounce-pulse-out-rapid"
+        [hasProgressBar]="false" fastFadeOut="true"></ngx-ui-loader>
+    <div class="container" (mousemove)="onMouseMove($event)">
+        <!-- <div class="circle" [style.left.px]="circleX" [style.top.px]="circleY"></div> -->
+        <router-outlet></router-outlet>
+        <pw-footer></pw-footer>
+    </div>
+</div>
+<pw-gear></pw-gear>
+
+

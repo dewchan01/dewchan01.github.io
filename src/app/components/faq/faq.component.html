@@ -1,0 +1,38 @@
+<section class="faq" [style.boxShadow]="boxShadow">
+  <h1 [innerHTML]="techStacks"></h1>
+
+  <div class="faq-container" #container>
+    <div class="flow-line">
+      <pw-circuit-svg></pw-circuit-svg>
+    </div>
+    <ol class="faq-list">
+      <li class="no-bullet" *ngFor="let question of faq; let i = index;">
+        <div>
+
+          <div class="question">
+            <fa-icon class="power-off" *ngIf="question.showAnswer" (click)="question.showAnswer = false"
+              [icon]="faPowerOff"></fa-icon>
+            <fa-icon class="power-on" *ngIf="!question.showAnswer" (click)="question.showAnswer = true"
+              [icon]="faCircleNotch"></fa-icon>
+              
+            <div class="text">
+              <h2 (click)="question.showAnswer = !question.showAnswer">
+                {{question.question}}
+              </h2>
+            
+              <div class="answer-container" [@toggleAnswer]="question.showAnswer ? 'visible' : 'hidden'">
+                <ng-container *ngFor="let imgUrl of question.answer">
+                  <img [src]="imgUrl">
+                </ng-container>
+              </div>
+            </div>
+            
+
+          </div>
+
+        </div>
+      </li>
+    </ol>
+
+  </div>
+</section>

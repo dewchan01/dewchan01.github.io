@@ -1,0 +1,163 @@
+.rules {
+  height: fit-content;
+  margin: 100px auto 0;
+  max-width: 1312px;
+  width: 95%;
+  z-index: 0;
+  display: flex;
+  box-shadow:
+    0 0 20px 10px rgba(255, 255, 255, 0.5),
+    0 0 40px 20px rgba(255, 255, 255, 0.3),
+    0 0 60px 30px rgba(255, 255, 255, 0.2),
+    0 0 80px 40px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #e90029;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 47%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  color:#fff;
+}
+
+.arrow.left {
+  left: 20vw;
+  
+}
+
+.arrow.right {
+  right: 3vw;
+}
+
+.arrow:hover{
+  background-color: #fff;
+  color: #000;
+
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.flow-line {
+  position:absolute;
+  left: 12%;
+  bottom: 0;
+  z-index: -10;
+}
+
+a {
+  font-size: 1.5rem;
+  display: flex;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.rule {
+  transform: translateY(0px);
+  transition: all 1.5s;
+}
+
+.rule p {
+  margin: 0;
+  justify-content: flex-start;
+  white-space:nowrap;
+}
+
+.rule.visible {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.rule-container{
+  width: 80vw;
+  margin-left: 10vw;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-top: 40px;
+}
+
+li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #000;
+  box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.rule:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px #e6e6e6;
+  transition: all 0.2s ease-in-out;
+
+}
+
+@media (max-width: 768px) {
+  .rules {
+    padding: 0;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  h1 {
+    margin-left: 10px;
+  }
+
+  .flow-line {
+    display: none;
+  }
+  
+  .rule-container{
+    margin-left: 4vw;
+  }
+
+  .rule ul {
+    flex-direction: column;
+  }
+
+  .rule li {
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+  }
+
+  .rule p {
+    font-size: 20px;
+    word-wrap: break-word;
+    white-space:unset;
+  }
+
+  .arrow.left {
+    top: 55vh;
+    left: 2vw;
+  }
+  
+  .arrow.right {
+    top: 55vh;
+    right: 2vw;
+  }
+}

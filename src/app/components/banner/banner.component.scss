@@ -1,0 +1,203 @@
+.banner {
+  max-width: 1312px;
+  width: 95%;
+  margin: 100px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  z-index: 0;
+  padding-bottom: 20px;
+  box-shadow:
+    0 0 20px 10px rgba(255, 255, 255, 0.5),
+    0 0 40px 20px rgba(255, 255, 255, 0.3),
+    0 0 60px 30px rgba(255, 255, 255, 0.2),
+    0 0 80px 40px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+@font-face {
+  font-family: 'Alfa_Slab_One';
+  src: url('../../../assets/FontAsset/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+}
+
+.text-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-side h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 80%, transparent 100%);
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  font-family: 'Alfa_Slab_One';
+  text-transform: uppercase;
+  text-decoration: solid;
+  text-shadow: 10px 0 10px #00000009;
+  letter-spacing: 15px;
+  word-spacing: 15px;
+
+}
+
+.text-side p {
+  flex: 1;
+  z-index: inherit;
+  color: rgba(255, 255, 255, 0.678);
+  font-size: 23px;
+  word-wrap: break-word;
+  margin-bottom: 40px;
+  text-align: center;
+
+}
+
+.event-details ul {
+  z-index: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+}
+
+.event-details li {
+  margin-left: 100px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.event-details li fa-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(347deg) brightness(109%) contrast(101%);
+}
+
+.event-details li strong {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.778) 60%, transparent 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.register-btn {
+  background-color: #e90029;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: 35px;
+  text-decoration: none;
+}
+
+.register-btn:hover {
+  background-color: #fff;
+  color: #e90029
+}
+
+.more-info-btn {
+  color: #fff;
+  background-color: #555454;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: 35px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.more-info-btn:hover {
+  background-color: #fff;
+  color: #e90029;
+
+}
+
+.image-side {
+  justify-content: center;
+  display: block;
+}
+
+
+.image-side img {
+  width: 80%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 0;
+    height: fit-content;
+
+  }
+
+  .text-side h1 {
+    font-size: 40px;
+    letter-spacing: 0;
+    word-wrap: break-word;
+
+  }
+
+  .text-side p {
+    margin-bottom: 10px;
+  }
+
+  .event-details ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .event-details li {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  fa-icon {
+    font-size: 5px;
+  }
+
+  .image-side {
+    display: none;
+  }
+
+  .image-side img {
+    width: 100%;
+  }
+
+  .register-btn,
+  .more-info-btn {
+    margin-bottom: 10px;
+  }
+
+
+}

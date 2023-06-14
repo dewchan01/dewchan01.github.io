@@ -1,0 +1,34 @@
+<section class="banner" [@flyThrough] [style.boxShadow]="boxShadow">
+  
+  <div class="text-side">
+    <h1>Hi, I'm De Wei. <br>Welcome to my blogsite!</h1>
+    <p>Final Year NTU Student &nbsp; | &nbsp; Software Developer &nbsp; | &nbsp; Tech Enthusiast</p>
+    
+    <div class="event-details">
+      <ul>
+        <li>
+          <fa-icon [icon]="faCalendar"></fa-icon>
+          <strong>{{localDate || 'Loading...'}}</strong>
+        </li>
+        <li>
+          <fa-icon [icon]="faClock"></fa-icon>
+          <strong>{{localTime || 'Loading...'}}</strong>
+        </li>
+        <li>
+          <fa-icon [icon]="faHouse"></fa-icon>
+          <strong>Singapore</strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="button-container">
+      <a href="https://forms.office.com/r/9g2tEwTcWt" class="register-btn">Connect Now</a>
+      <a (click)="scrollToRules()" class="more-info-btn">Check Projects &#8681;</a>
+    </div>
+  </div>
+
+  <!-- <div class="image-side" [@flyThrough]>
+    <img src="../../../assets/ImageAsset/poster.jpg" alt="Challenge Image">
+  </div> -->
+
+</section>
