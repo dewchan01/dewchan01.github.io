@@ -109,3 +109,9 @@
 .intro-container.animate-image,.center-image.animate-image {
   animation-name: fadeOut;
 }
+
+@media screen and (max-width: 340px) {
+.intro-container{
+  display: none;
+}
+}

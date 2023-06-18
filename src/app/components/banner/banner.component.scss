@@ -155,7 +155,6 @@
   .banner {
     padding: 0;
     height: fit-content;
-
   }
 
   .text-side h1 {
@@ -197,7 +196,11 @@
   .register-btn,
   .more-info-btn {
     margin-bottom: 10px;
+    font-size: 0.9rem;
   }
-
-
 }
+@media screen and (max-width: 350px) {
+  .banner{
+    margin-left: 11vw;
+  }
+  }

@@ -39,7 +39,7 @@
   left: calc(92% - 125px);
   z-index: -4;
   animation-duration: var(--gear-1-rotation-speed);
-  animation-direction: reverse; /* added */
+  animation-direction: reverse;
   opacity: 1;
   filter: invert(18%) sepia(0%) saturate(4778%) hue-rotate(165deg) brightness(90%) contrast(75%);
 
@@ -52,7 +52,7 @@
   left: calc(95%);
   z-index: -4;
   animation-duration: var(--gear-2-rotation-speed);
-  animation-direction: normal; /* added */
+  animation-direction: normal;
   filter: invert(18%) sepia(0%) saturate(4778%) hue-rotate(165deg) brightness(90%) contrast(75%);
   opacity: 1;
 }
@@ -64,7 +64,7 @@
   left: calc(92.5%);
   z-index: -4;
   animation-duration: var(--gear-3-rotation-speed);
-  animation-direction: reverse; /* added */
+  animation-direction: reverse;
   filter: invert(18%) sepia(0%) saturate(4778%) hue-rotate(165deg) brightness(90%) contrast(75%);
   opacity: 1;
 
@@ -78,4 +78,3 @@
     transform: rotate(360deg);
   }
 }
-

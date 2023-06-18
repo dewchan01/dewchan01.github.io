@@ -161,3 +161,13 @@ li {
     right: 2vw;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .rules{
+    margin-left: 11vw;
+  }
+
+  .rule-container{
+    margin-left: 1vw;
+  }
+  }
