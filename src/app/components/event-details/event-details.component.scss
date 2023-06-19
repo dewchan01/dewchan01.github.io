@@ -12,12 +12,14 @@
     0 0 40px 20px rgba(255, 255, 255, 0.3),
     0 0 60px 30px rgba(255, 255, 255, 0.2),
     0 0 80px 40px rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .flow-line{
-  margin-left: 10px;
-  bottom: 0;
   z-index: 100000;
+  position: absolute;
+  bottom: 0;
+  margin-left: 10vw;
 }
 
 .event-details h2 {
@@ -32,7 +34,7 @@
 
 .text {
   font-size: 20px;
-  margin: 50px;
+  margin: 50px 25px 50px 200px;
   
 }
 
@@ -74,7 +76,7 @@ img {
   .text {
     font-size: 16px;
     word-wrap: break-word;
-    margin-top: 0;
+    margin: 0 50px 50px 50px;
   }
 
   .event-details h2 {
