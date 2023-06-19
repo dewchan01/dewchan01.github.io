@@ -9,3 +9,9 @@ svg {
   z-index: 1;
   margin-left: -240px;
 }
+
+@media screen and (max-width:1280px) {
+  .flow-line{
+    display: none;
+  }
+}

@@ -62,13 +62,16 @@ export class HomeComponent implements OnInit {
                     this.toggleMenu();
                 }
             });
-        this.breakpointObserver.observe([Breakpoints.Tablet]).subscribe(result => {
+        this.breakpointObserver.observe([
+        '(min-width: 768px) and (max-width: 1237px)' // Change this line
+    ]).subscribe(result => {
             this.isTabletView = result.matches;
             if (this.isTabletView) {
-                this.toggleMenu();
+                // this.toggleMenu();
             }
         });
-        this.breakpointObserver.observe([Breakpoints.Web]).subscribe(result => {
+        this.breakpointObserver.observe([
+        '(min-width:1238px)']).subscribe(result => {
             this.isWebView = result.matches;
             if (this.isWebView && !this.menu) {
                 this.toggleMenu();
