@@ -103,6 +103,19 @@ p {
   color: #e90029;
 }
 
+.answer-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto; 
+}
+
+.answer-container img {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
 @media screen and (max-width: 768px) {
   .faq {
     padding: 0;
@@ -126,10 +139,4 @@ p {
   h2{
     font-size: 0.8rem;
   }
-
 }
-@media screen and (max-width: 350px) {
-  .faq{
-    margin-left: 11vw;
-  }
-  }
