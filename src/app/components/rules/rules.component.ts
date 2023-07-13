@@ -91,11 +91,13 @@ export class RulesComponent implements OnInit, AfterViewInit {
     }
   }
   visibleRules: string[] = [];
+  visibleUrls: string[] = [];
   ruleIndex: number = 0;
   maxVisibleRules: number = 5 ;
 
   updateVisibleRules() {
     this.visibleRules = this.rules.slice(this.ruleIndex, this.ruleIndex + this.maxVisibleRules);
+    this.visibleUrls = this.githubUrls.slice(this.ruleIndex, this.ruleIndex + this.maxVisibleRules);
   }
 
   scrollLeft() {

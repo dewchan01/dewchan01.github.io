@@ -8,7 +8,7 @@
     <div class="carousel">
       <ul>
         <li class="rule" *ngFor="let rule of visibleRules;let i =  index">
-          <a [href]="githubUrls[i]" target="_blank">{{rule}}</a>
+          <a [href]="visibleUrls[i]" target="_blank">{{rule}}</a>
         </li>
       </ul>
     </div>
