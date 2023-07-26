@@ -30,22 +30,16 @@
   border: 2px solid #fff;
   border-radius: 10px;
   padding-bottom: 5px;
-  color:#fff;
+  color: #fff;
 }
 
 .arrow.left {
   left: 20vw;
-  
+
 }
 
 .arrow.right {
   right: 3vw;
-}
-
-.arrow:hover{
-  background-color: #fff;
-  color: #000;
-
 }
 
 h1 {
@@ -55,7 +49,7 @@ h1 {
 }
 
 .flow-line {
-  position:absolute;
+  position: absolute;
   left: 12%;
   bottom: 0;
   z-index: -10;
@@ -77,7 +71,7 @@ a {
 .rule p {
   margin: 0;
   justify-content: flex-start;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .rule.visible {
@@ -85,7 +79,7 @@ a {
   transform: translateY(10px);
 }
 
-.rule-container{
+.rule-container {
   width: 80vw;
   margin-left: 10vw;
 }
@@ -117,6 +111,13 @@ li {
 
 }
 
+@media screen and (min-width: 767px) {
+  .arrow:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
 @media (max-width: 768px) {
   .rules {
     padding: 0;
@@ -131,8 +132,8 @@ li {
   .flow-line {
     display: none;
   }
-  
-  .rule-container{
+
+  .rule-container {
     margin-left: 4vw;
   }
 
@@ -148,14 +149,14 @@ li {
   .rule p {
     font-size: 20px;
     word-wrap: break-word;
-    white-space:unset;
+    white-space: unset;
   }
 
   .arrow.left {
     top: 55vh;
     left: 2vw;
   }
-  
+
   .arrow.right {
     top: 55vh;
     right: 2vw;
@@ -163,7 +164,7 @@ li {
 }
 
 @media screen and (max-width: 350px) {
-  .rule-container{
+  .rule-container {
     margin-left: 1vw;
   }
-  }
+}
