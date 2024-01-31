@@ -131,9 +131,11 @@ export class HomeComponent implements OnInit {
         if (this.menu && (this.isPhoneView || this.isTabletView)) {
             this.menu = !this.menu;
             const nav = document.querySelector('nav');
-            nav?.classList.remove('black-nav');
+            nav?.animate([{ transform: 'translateX(0%)' }, { transform: 'translateX(100%)' }], { duration: 300, easing: 'ease-in' });
+            setTimeout(() => {nav?.classList.remove('black-nav')},300);
         }
         this.renderer.setStyle(document.body, 'overflow', 'auto');
+        
     }
 
     scrollToHome() {

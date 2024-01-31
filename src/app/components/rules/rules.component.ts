@@ -38,8 +38,8 @@ export class RulesComponent implements OnInit, AfterViewInit {
     'IM Backend Server',
     'DSAI Project',
     'Netflix Extension',
-    'Coming Soon',
-    'Coming Soon',
+    'Domino\'s Pizza Webpage Cloning',
+    'Paypal Blockchain Wallet',
     'Coming Soon',
   ];
 
@@ -51,8 +51,8 @@ export class RulesComponent implements OnInit, AfterViewInit {
     'https://github.com/dewchan01/assignment_demo_2023',
     'https://github.com/dewchan01/dsai-project',
     'https://github.com/dewchan01/netflix-extension',
-    '#',
-    '#',
+    'https://github.com/dewchan01/online-food-ordering-service',
+    'https://github.com/dewchan01/FYP-Project',
     '#'
   ];
 

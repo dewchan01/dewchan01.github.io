@@ -10,7 +10,7 @@
       <fa-icon class="Xmark" (click)="closeMenu()" [icon]="faXmark" size="2x" *ngIf="menu" [@fadeIn]></fa-icon>
     </div>
     <!-- <nav> -->
-    <ul *ngIf="menu" [@fadeIn] [@fadeOutFast] data-animation-order="fadeIn,fadeOutFast">
+    <ul *ngIf="menu" [@fadeIn] [@slideLeftRight] data-animation-order="fadeIn,slideLeftRight">
       <li><a routerLink="/home" (click)="scrollToHome()"
           [class.active]="isActive('/home') && activeSection === ''" >Home</a></li>
       <li><a (click)="scrollToEvent()" [class.active]="activeSection === 'event-details'">About Me</a></li>
