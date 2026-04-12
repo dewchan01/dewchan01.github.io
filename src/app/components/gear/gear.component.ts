@@ -3,7 +3,8 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 @Component({
     selector: 'pw-gear',
     templateUrl: './gear.component.html',
-    styleUrls: [ './gear.component.scss' ]
+    styleUrls: ['./gear.component.scss'],
+    standalone: false
 })
 
 export class GearComponent implements OnInit {

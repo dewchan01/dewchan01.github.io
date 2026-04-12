@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'pw-circuit-svg',
-  templateUrl: './circuit-svg.component.html',
-  styleUrls: ['./circuit-svg.component.scss']
+    selector: 'pw-circuit-svg',
+    templateUrl: './circuit-svg.component.html',
+    styleUrls: ['./circuit-svg.component.scss'],
+    standalone: false
 })
 
 export class CircuitSvgComponent implements AfterViewInit {

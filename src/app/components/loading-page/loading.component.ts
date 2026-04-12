@@ -4,18 +4,18 @@ import { Component, OnInit } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
-  selector: 'pw-loading',
-  templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.scss'],
-  animations: [
-    trigger('fadeIn', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('4s ease-in-out', style({ opacity: 1})),
-    
-      ]),
-    ]),
-  ],
+    selector: 'pw-loading',
+    templateUrl: './loading.component.html',
+    styleUrls: ['./loading.component.scss'],
+    animations: [
+        trigger('fadeIn', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('4s ease-in-out', style({ opacity: 1 })),
+            ]),
+        ]),
+    ],
+    standalone: false
 })
 export class LoadingComponent implements OnInit {
   animateLeftImage = true;

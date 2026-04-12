@@ -5,16 +5,18 @@ import { HomeComponent } from '../home/home.component';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-  selector: 'pw-prizes',
-  templateUrl: './prizes.component.html',
-  styleUrls: ['./prizes.component.scss'],
-  animations: [
-    trigger('slideIn', [
-      transition(':enter', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('500ms', style({ transform: 'translateX(0)' })),
-      ]),
-    ])]
+    selector: 'pw-prizes',
+    templateUrl: './prizes.component.html',
+    styleUrls: ['./prizes.component.scss'],
+    animations: [
+        trigger('slideIn', [
+            transition(':enter', [
+                style({ transform: 'translateX(-100%)' }),
+                animate('500ms', style({ transform: 'translateX(0)' })),
+            ]),
+        ])
+    ],
+    standalone: false
 })
 
 export class PrizesComponent implements OnInit {

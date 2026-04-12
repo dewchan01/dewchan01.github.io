@@ -28,15 +28,16 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
             ])
         ]),
         trigger('slideLeftRight', [
-        transition(':enter', [
-            style({ transform: 'translateX(100%)' }),
-            animate('300ms ease-out', style({ transform: 'translateX(0%)' }))
-          ]),
-          transition(':leave', [
-            animate('300ms ease-in', style({ transform: 'translateX(100%)' }))
-          ])
+            transition(':enter', [
+                style({ transform: 'translateX(100%)' }),
+                animate('300ms ease-out', style({ transform: 'translateX(0%)' }))
+            ]),
+            transition(':leave', [
+                animate('300ms ease-in', style({ transform: 'translateX(100%)' }))
+            ])
         ]),
-    ]
+    ],
+    standalone: false
 })
 export class HomeComponent implements OnInit {
     //@Input() showHomeContent = true;

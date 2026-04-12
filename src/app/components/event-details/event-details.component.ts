@@ -2,9 +2,10 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
 import { HomeComponent } from '../home/home.component';
 
 @Component({
-  selector: 'pw-event-details',
-  templateUrl: './event-details.component.html',
-  styleUrls: ['./event-details.component.scss']
+    selector: 'pw-event-details',
+    templateUrl: './event-details.component.html',
+    styleUrls: ['./event-details.component.scss'],
+    standalone: false
 })
 
 export class EventDetailsComponent implements AfterViewInit {

@@ -6,32 +6,32 @@
       <pw-circuit-svg></pw-circuit-svg>
     </div>
     <ol class="faq-list">
-      <li class="no-bullet" *ngFor="let question of faq; let i = index;">
-        <div>
-
-          <div class="question">
-            <fa-icon class="power-off" *ngIf="question.showAnswer" (click)="question.showAnswer = false"
-              [icon]="faPowerOff"></fa-icon>
-            <fa-icon class="power-on" *ngIf="!question.showAnswer" (click)="question.showAnswer = true"
-              [icon]="faCircleNotch"></fa-icon>
-              
-            <div class="text">
-              <h2 (click)="question.showAnswer = !question.showAnswer">
-                {{question.question}}
-              </h2>
-            
-              <div class="answer-container" [@toggleAnswer]="question.showAnswer ? 'visible' : 'hidden'">
-                <ng-container *ngFor="let imgUrl of question.answer">
-                  <img [src]="imgUrl">
-                </ng-container>
+      @for (question of faq; track question; let i = $index) {
+        <li class="no-bullet">
+          <div>
+            <div class="question">
+              @if (question.showAnswer) {
+                <fa-icon class="power-off" (click)="question.showAnswer = false"
+                [icon]="faPowerOff"></fa-icon>
+              }
+              @if (!question.showAnswer) {
+                <fa-icon class="power-on" (click)="question.showAnswer = true"
+                [icon]="faCircleNotch"></fa-icon>
+              }
+              <div class="text">
+                <h2 (click)="question.showAnswer = !question.showAnswer">
+                  {{question.question}}
+                </h2>
+                <div class="answer-container" [@toggleAnswer]="question.showAnswer ? 'visible' : 'hidden'">
+                  @for (imgUrl of question.answer; track imgUrl) {
+                    <img [src]="imgUrl">
+                  }
+                </div>
               </div>
             </div>
-            
-
           </div>
-
-        </div>
-      </li>
+        </li>
+      }
     </ol>
 
   </div>

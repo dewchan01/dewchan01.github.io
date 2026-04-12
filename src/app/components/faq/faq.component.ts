@@ -4,29 +4,30 @@ import { faCircleNotch, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
-  selector: 'pw-faq',
-  templateUrl: './faq.component.html',
-  styleUrls: ['./faq.component.scss'],
-  animations: [
-    trigger('toggleAnswer', [
-      state('visible', style({
-        // height:'auto',
-        transform: 'translateY(0)',
-        opacity: 1,
-        display:'block',
-        overflow: 'hidden',
-      })),
-      state('hidden', style({
-        // height: '0',
-        transform: 'translateY(-100%)',
-        opacity: 0,
-        display:'none',
-        overflow: 'hidden',
-      })),
-      transition('visible => hidden', animate('1000ms ease-in')),
-      transition('hidden => visible', animate('1000ms ease-in'))
-    ])
-  ]
+    selector: 'pw-faq',
+    templateUrl: './faq.component.html',
+    styleUrls: ['./faq.component.scss'],
+    animations: [
+        trigger('toggleAnswer', [
+            state('visible', style({
+                // height:'auto',
+                transform: 'translateY(0)',
+                opacity: 1,
+                display: 'block',
+                overflow: 'hidden',
+            })),
+            state('hidden', style({
+                // height: '0',
+                transform: 'translateY(-100%)',
+                opacity: 0,
+                display: 'none',
+                overflow: 'hidden',
+            })),
+            transition('visible => hidden', animate('1000ms ease-in')),
+            transition('hidden => visible', animate('1000ms ease-in'))
+        ])
+    ],
+    standalone: false
 })
 
 export class FaqComponent implements OnInit, AfterViewInit {

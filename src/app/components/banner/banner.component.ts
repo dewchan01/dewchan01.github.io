@@ -6,25 +6,26 @@ import { HomeComponent } from '../home/home.component';
 import { Subscription, interval } from 'rxjs';
 
 @Component({
-  selector: 'pw-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss'],
-  animations: [
-    trigger('flyThrough', [
-      transition(':enter', [
-        style({
-          opacity: '0',
-          transform: 'translateY(-5%)',
-        }),
-        animate('4s ease-in-out', keyframes([
-          style({
-            opacity: '1',
-            transform: 'translateY(0%)',
-          })
-        ])),
-      ])
-    ])
-  ]
+    selector: 'pw-banner',
+    templateUrl: './banner.component.html',
+    styleUrls: ['./banner.component.scss'],
+    animations: [
+        trigger('flyThrough', [
+            transition(':enter', [
+                style({
+                    opacity: '0',
+                    transform: 'translateY(-5%)',
+                }),
+                animate('4s ease-in-out', keyframes([
+                    style({
+                        opacity: '1',
+                        transform: 'translateY(0%)',
+                    })
+                ])),
+            ])
+        ])
+    ],
+    standalone: false
 })
 
 export class BannerComponent implements OnInit, OnDestroy {

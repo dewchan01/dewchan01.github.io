@@ -2,9 +2,10 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild }
 import { HomeComponent } from '../home/home.component';
 
 @Component({
-  selector: 'pw-rules',
-  templateUrl: './rules.component.html',
-  styleUrls: ['./rules.component.scss']
+    selector: 'pw-rules',
+    templateUrl: './rules.component.html',
+    styleUrls: ['./rules.component.scss'],
+    standalone: false
 })
 
 export class RulesComponent implements OnInit, AfterViewInit {

@@ -5,7 +5,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'pw-footer',
     templateUrl: './footer.component.html',
-    styleUrls: [ './footer.component.scss' ]
+    styleUrls: ['./footer.component.scss'],
+    standalone: false
 })
 
 export class FooterComponent implements OnInit {
