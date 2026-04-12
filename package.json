@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --name=dewchan01 --email=deweichan@gmail.com --dir dist/hackathon --message \"Deploying to GitHub Pages\""
   },
   "private": true,
   "dependencies": {

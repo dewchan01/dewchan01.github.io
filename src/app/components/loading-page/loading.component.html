@@ -1,16 +1,14 @@
 <div class="intro-container" [ngClass]="{ 'animate-image': true }">
   <div class="black-block">
     @if (!isSmallScreen) {
-      <img src="../../../assets/ImageAsset/logo-removebg-preview.png" class="left-image" [ngClass]="{ 'animate-image': animateLeftImage }"
-        >
-    }
-    @if (!isSmallScreen) {
-      <img src="../../../assets/ImageAsset/dewchan-char.png" class="right-image"
-        [ngClass]="{ 'animate-image': animateLeftImage }">
+    <img src="../../../assets/ImageAsset/logo-removebg-preview.png" class="left-image"
+      [ngClass]="{ 'animate-image': animateLeftImage }" [@leftSlide]>
+    <img src="../../../assets/ImageAsset/dewchan-char.png" class="right-image"
+      [ngClass]="{ 'animate-image': animateRightImage }" [@rightSlide]>
     }
     @if (isSmallScreen) {
-      <img src="../../../assets/ImageAsset/dewchan.png" class="center-image"
-        [ngClass]="{ 'animate-image': true }" [@fadeIn]>
+    <img src="../../../assets/ImageAsset/dewchan.png" class="center-image" [ngClass]="{ 'animate-image': true }"
+      [@fadeIn]>
     }
   </div>
 </div>

@@ -4,8 +4,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent},
-    { path: '', redirectTo: '/home', pathMatch:'full' },
+    { path: '', component: HomeComponent },
+    { path: 'home', redirectTo: '', pathMatch:'full' },
+    { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

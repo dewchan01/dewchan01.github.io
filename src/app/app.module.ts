@@ -15,7 +15,7 @@ import { LoadingComponent } from './components/loading-page/loading.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { GearComponent } from './components/gear/gear.component';
 import { CircuitSvgComponent } from './components/circuit-svg/circuit-svg.component';
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,6 @@ import { DatePipe } from '@angular/common';
     AppRoutingModule,
     FontAwesomeModule,
     NgxUiLoaderModule,
-
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [HomeComponent, DatePipe],

@@ -2,6 +2,7 @@
   max-width: 1312px;
   width: 95%;
   margin: 100px auto 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +20,7 @@
 @font-face {
   font-family: 'Alfa_Slab_One';
   src: url('../../../assets/FontAsset/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+  font-display: swap;
 }
 
 .text-side {
@@ -26,6 +28,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .text-side h1 {
@@ -155,6 +159,10 @@
   .banner {
     padding: 0;
     height: fit-content;
+  }
+
+  .banner::before {
+    inset: 10% 4%;
   }
 
   .text-side h1 {

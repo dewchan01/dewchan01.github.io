@@ -79,6 +79,7 @@ li.visible {
 .text {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .power-off {
@@ -109,11 +110,21 @@ p {
   gap: 10px;
   max-height: 300px;
   overflow-y: auto; 
+  transform-origin: top center;
+  will-change: height, opacity, transform;
 }
 
 .answer-container img {
   max-width: 100%; 
   max-height: 100%; 
+}
+
+h2 {
+  transition: color 0.2s ease;
+}
+
+.question:hover h2 {
+  color: #f3b2bd;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 # De Wei's Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
 
 ## Development server
 
@@ -13,6 +13,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Deploy
+
+Run `npm run deploy` to deploy the project to Github Page.
 
 ## Running unit tests
 

@@ -24,12 +24,10 @@ export class GearComponent implements OnInit {
       const delta = currentScroll - (this.lastScroll || currentScroll);
       let rotation = delta;
       this.gears.forEach((gear: HTMLElement) => {
-        console.log(gear)
         const currentRotation = parseInt(gear.dataset['rotation'] || '0');
         if (gear.classList.contains('gear-2')) {
           rotation = -delta;
         }
-        console.log(rotation);
         gear.style.transform = `rotate(${currentRotation + rotation}deg)`;
         gear.dataset['rotation'] = `${currentRotation + rotation}`;
       });

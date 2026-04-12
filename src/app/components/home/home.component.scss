@@ -11,13 +11,8 @@ header {
     backdrop-filter: blur(10px);
 }
 
-@font-face {
-    font-family: 'TitilliumWeb-SemiBold';
-    src: url('../../../assets/FontAsset/Titillium_Web/TitilliumWeb-SemiBold.ttf');
-}
-
 .loading-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -43,6 +38,27 @@ nav {
 
 .logo img {
     height: 50px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0.35rem 0.5rem;
+    border-radius: 999px;
+}
+
+.logo::after {
+    display: none;
+}
+
+.logo:hover img {
+    transform: translateY(-1px) scale(1.015);
+    filter: drop-shadow(0 10px 24px rgba(233, 0, 41, 0.22));
 }
 
 fa-icon {
@@ -146,6 +162,10 @@ a.active::after {
         order: 1;
         display: flex;
         justify-content: flex-start;
+    }
+
+    .logo img {
+        height: 42px;
     }
 
     fa-icon {

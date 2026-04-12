@@ -17,10 +17,10 @@
         }
       </div>
       <!-- <nav> -->
-      @if (menu) {
-        <ul [@fadeIn] [@slideLeftRight] data-animation-order="fadeIn,slideLeftRight">
-          <li><a routerLink="/home" (click)="scrollToHome()"
-          [class.active]="isActive('/home') && activeSection === ''" >Home</a></li>
+        @if (menu) {
+          <ul [@fadeIn] [@slideLeftRight] data-animation-order="fadeIn,slideLeftRight">
+          <li><a routerLink="/" (click)="scrollToHome()"
+          [class.active]="isHomeRoute() && activeSection === ''" >Home</a></li>
           <li><a (click)="scrollToEvent()" [class.active]="activeSection === 'event-details'">About Me</a></li>
           <li><a (click)="scrollToFAQ()" [class.active]="activeSection === 'faq'">Tech Stacks</a></li>
           <li><a (click)="scrollToRules()" [class.active]="activeSection === 'rules'">Projects</a></li>

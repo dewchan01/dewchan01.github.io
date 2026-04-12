@@ -24,7 +24,6 @@ export class CircuitSvgComponent implements AfterViewInit {
       if (svgPath && gradient) {
         svgPath.forEach(path => path.setAttribute('stroke', `url(#${gradient.getAttribute('id')})`));
         gradient.querySelectorAll('stop:first-of-type')?.forEach(stop => stop?.setAttribute('stop-color', color));
-        console.log(svgPath,gradient);
       }
     });
   }
@@ -53,7 +52,6 @@ export class CircuitSvgComponent implements AfterViewInit {
     r = Math.max(0, Math.min(255, r));
     g = Math.max(0, Math.min(255, g));
     b = Math.max(0, Math.min(255, b));  
-    console.log(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`);
     return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
   }
 }

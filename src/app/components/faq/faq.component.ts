@@ -10,21 +10,24 @@ import { HomeComponent } from '../home/home.component';
     animations: [
         trigger('toggleAnswer', [
             state('visible', style({
-                // height:'auto',
-                transform: 'translateY(0)',
+                height: '*',
                 opacity: 1,
-                display: 'block',
+                transform: 'translateY(0) scaleY(1)',
+                transformOrigin: 'top center',
                 overflow: 'hidden',
+                marginTop: '12px',
+                paddingTop: '4px',
             })),
             state('hidden', style({
-                // height: '0',
-                transform: 'translateY(-100%)',
+                height: '0px',
                 opacity: 0,
-                display: 'none',
+                transform: 'translateY(-8px) scaleY(0.92)',
+                transformOrigin: 'top center',
                 overflow: 'hidden',
+                marginTop: '0',
+                paddingTop: '0',
             })),
-            transition('visible => hidden', animate('1000ms ease-in')),
-            transition('hidden => visible', animate('1000ms ease-in'))
+            transition('hidden <=> visible', animate('320ms cubic-bezier(0.22, 1, 0.36, 1)'))
         ])
     ],
     standalone: false

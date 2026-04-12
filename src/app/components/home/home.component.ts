@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     isWebView = false;
     isLastAnimationInProgress = true;
     isAnimationInProgress = true;
-    duration = 3000;
+    duration = 2200;
     faBars = faBars;
     faXmark = faXmark;
     menu = true;
@@ -89,6 +89,14 @@ export class HomeComponent implements OnInit {
         }
     }
     ngOnInit() {
+        this.renderer.setStyle(document.body, 'overflow', 'hidden');
+
+        const redirectedPath = sessionStorage.getItem('gh-pages-redirect');
+        if (redirectedPath) {
+            sessionStorage.removeItem('gh-pages-redirect');
+            this.router.navigateByUrl(redirectedPath);
+        }
+
         if (this.isActive('/about-us')) {
             this.duration = 0
             this.isAboutUsPage = true;
@@ -152,9 +160,9 @@ export class HomeComponent implements OnInit {
             this.toggleMenu();
         }
         let duration: number = 4000;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         this.activeSection = 'event-details';
-        if (this.isActive('/home')) {
+        if (this.isHomeRoute()) {
             duration = 100;
         }
         setTimeout(() => {
@@ -172,9 +180,9 @@ export class HomeComponent implements OnInit {
             this.toggleMenu();
         }
         let duration: number = 4000;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         this.activeSection = 'prizes';
-        if (this.isActive('/home')) {
+        if (this.isHomeRoute()) {
             duration = 100;
         }
         setTimeout(() => {
@@ -192,9 +200,9 @@ export class HomeComponent implements OnInit {
             this.toggleMenu();
         }
         let duration: number = 4000;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         this.activeSection = 'rules';
-        if (this.isActive('/home')) {
+        if (this.isHomeRoute()) {
             duration = 100;
         }
         setTimeout(() => {
@@ -212,9 +220,9 @@ export class HomeComponent implements OnInit {
             this.toggleMenu();
         }
         let duration: number = 4000;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         this.activeSection = 'faq';
-        if (this.isActive('/home')) {
+        if (this.isHomeRoute()) {
             duration = 100;
         }
         setTimeout(() => {
@@ -229,6 +237,10 @@ export class HomeComponent implements OnInit {
 
     isActive(route: string) {
         return this.router.url === route;
+    }
+
+    isHomeRoute() {
+        return this.router.url === '/' || this.router.url === '/home' || this.router.url === '';
     }
 
     checkSectionPositions() {
