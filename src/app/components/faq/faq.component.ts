@@ -15,8 +15,6 @@ import { HomeComponent } from '../home/home.component';
                 transform: 'translateY(0) scaleY(1)',
                 transformOrigin: 'top center',
                 overflow: 'hidden',
-                marginTop: '12px',
-                paddingTop: '4px',
             })),
             state('hidden', style({
                 height: '0px',
